@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  div.shadowOutline
+    h1 What champion are you?
+
+  
+  img#imagepreview(src='./images/placeholder.jpg', alt='your image')
+  div.pokebox
+    a.myButton#pokeball(href="#")
+    div#login-form
+      p.shadowOutline2 Upload a selfie!
+      div.inputcontainer
+        input#uploadselfie(type='file', onchange='readURL(this)')
+        input#pokemonme(type='submit')
+
+block content_scripts
+  script(type='text/javascript').
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#imagepreview')
+                .attr('src', e.target.result)
+                .width("auto")
+                .height(150).css("visibility", "visible");
+        };
+
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+    
