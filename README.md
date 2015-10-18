@@ -1,3 +1,3 @@
 # Work in progress
 
-Hi! This is a -very- rough adaptation of PokeMe (https://github.com/1michaelsun7/PokeMe), my HackMIT project. SummonMe tells you what League of Legends champion you are!
+Hi! This is a -very- rough adaptation of PokeMe (https://github.com/1michaelsun7/PokeMe), my HackMIT project. SummonMe tells you what League of Legends champion an uploaded image resembles!
